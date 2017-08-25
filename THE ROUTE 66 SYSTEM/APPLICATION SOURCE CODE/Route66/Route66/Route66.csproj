@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{972D01FE-66E0-4944-984D-C6429F5AF64B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Route66</RootNamespace>
+    <AssemblyName>Route66</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>.\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin1.Designer.cs">
+      <DependentUpon>Admin1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin2.Designer.cs">
+      <DependentUpon>Admin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Customer\AllCustomer1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Customer\AllCustomer1.Designer.cs">
+      <DependentUpon>AllCustomer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Customer\EditAllCustomer1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Customer\EditAllCustomer1.Designer.cs">
+      <DependentUpon>EditAllCustomer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Customer\RemoveAllCustomer1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Customer\RemoveAllCustomer1.Designer.cs">
+      <DependentUpon>RemoveAllCustomer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Customer\ViewAllCustomer1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Customer\ViewAllCustomer1.Designer.cs">
+      <DependentUpon>ViewAllCustomer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Employees\AddEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Employees\AddEmployee.Designer.cs">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Employees\EditEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Employees\EditEmployee.Designer.cs">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Employees\Employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Employees\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Employees\RemoveEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Employees\RemoveEmployee.Designer.cs">
+      <DependentUpon>RemoveEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Employees\ViewEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Employees\ViewEmployee.Designer.cs">
+      <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SystemReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\SystemReport.Designer.cs">
+      <DependentUpon>SystemReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Reserve\AddReservationA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Reserve\AddReservationA.Designer.cs">
+      <DependentUpon>AddReservationA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Reserve\EditReservationA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Reserve\EditReservationA.Designer.cs">
+      <DependentUpon>EditReservationA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Reserve\RemoveReservationA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Reserve\RemoveReservationA.Designer.cs">
+      <DependentUpon>RemoveReservationA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Reserve\ReserveA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Reserve\ReserveA.Designer.cs">
+      <DependentUpon>ReserveA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Reserve\ViewReservationA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Reserve\ViewReservationA.Designer.cs">
+      <DependentUpon>ViewReservationA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Salaries\Calculate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Salaries\Calculate.Designer.cs">
+      <DependentUpon>Calculate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Salaries\Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Salaries\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Salaries\Salaries1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Salaries\Salaries1.Designer.cs">
+      <DependentUpon>Salaries1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sales\EditAllSales1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Sales\EditAllSales1.Designer.cs">
+      <DependentUpon>EditAllSales1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sales\MakeAllSales1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Sales\MakeAllSales1.Designer.cs">
+      <DependentUpon>MakeAllSales1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sales\RemoveAllSales1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Sales\RemoveAllSales1.Designer.cs">
+      <DependentUpon>RemoveAllSales1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sales\AllSales1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Sales\AllSales1.Designer.cs">
+      <DependentUpon>AllSales1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Sales\ViewAllSales1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Sales\ViewAllSales1.Designer.cs">
+      <DependentUpon>ViewAllSales1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Stock\AddStockA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Stock\AddStockA.Designer.cs">
+      <DependentUpon>AddStockA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Stock\EditStockA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Stock\EditStockA.Designer.cs">
+      <DependentUpon>EditStockA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Stock\RemoveStockA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Stock\RemoveStockA.Designer.cs">
+      <DependentUpon>RemoveStockA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Stock\StockA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Stock\StockA.Designer.cs">
+      <DependentUpon>StockA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Stock\ViewStockA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\Stock\ViewStockA.Designer.cs">
+      <DependentUpon>ViewStockA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication\IdentityNumber.cs" />
+    <Compile Include="DAT\DataAccess.cs" />
+    <Compile Include="DAT\DataAccessXml.cs" />
+    <Compile Include="itspRouteDataSetFinal.cs">
+      <DependentUpon>itspRouteDataSetFinal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="itspRouteDataSetFinal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>itspRouteDataSetFinal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LTS\LTSBase.cs" />
+    <Compile Include="LTS\LTSDC.cs" />
+    <Compile Include="Normal\Customer\EditCustomer1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Customer\EditCustomer1.Designer.cs">
+      <DependentUpon>EditCustomer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Customer\Customer1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Customer\Customer1.Designer.cs">
+      <DependentUpon>Customer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Customer\ViewCustomer1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Customer\ViewCustomer1.Designer.cs">
+      <DependentUpon>ViewCustomer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Normal1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Normal1.Designer.cs">
+      <DependentUpon>Normal1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Normal2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Normal2.Designer.cs">
+      <DependentUpon>Normal2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Reserve\AddReservation1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Reserve\AddReservation1.Designer.cs">
+      <DependentUpon>AddReservation1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Reserve\EditReservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Reserve\EditReservation.Designer.cs">
+      <DependentUpon>EditReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Reserve\RemoveReservation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Reserve\RemoveReservation.Designer.cs">
+      <DependentUpon>RemoveReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Reserve\Reserve1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Reserve\Reserve1.Designer.cs">
+      <DependentUpon>Reserve1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Reserve\ViewReservation1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Reserve\ViewReservation1.Designer.cs">
+      <DependentUpon>ViewReservation1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Sale\EditSale1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Sale\EditSale1.Designer.cs">
+      <DependentUpon>EditSale1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Sale\MakeSale1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Sale\MakeSale1.Designer.cs">
+      <DependentUpon>MakeSale1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Sale\Sale1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Sale\Sale1.Designer.cs">
+      <DependentUpon>Sale1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Sale\ViewSales1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Sale\ViewSales1.Designer.cs">
+      <DependentUpon>ViewSales1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Stock\AddStock1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Stock\AddStock1.Designer.cs">
+      <DependentUpon>AddStock1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Stock\EditStock1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Stock\EditStock1.Designer.cs">
+      <DependentUpon>EditStock1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Stock\RemoveStock1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Stock\RemoveStock1.Designer.cs">
+      <DependentUpon>RemoveStock1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Stock\Stock1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Stock\Stock1.Designer.cs">
+      <DependentUpon>Stock1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Normal\Stock\ViewStock1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Normal\Stock\ViewStock1.Designer.cs">
+      <DependentUpon>ViewStock1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SPLASH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPLASH.Designer.cs">
+      <DependentUpon>SPLASH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\Admin1.resx">
+      <DependentUpon>Admin1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin2.resx">
+      <DependentUpon>Admin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Customer\AllCustomer1.resx">
+      <DependentUpon>AllCustomer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Customer\EditAllCustomer1.resx">
+      <DependentUpon>EditAllCustomer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Customer\RemoveAllCustomer1.resx">
+      <DependentUpon>RemoveAllCustomer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Customer\ViewAllCustomer1.resx">
+      <DependentUpon>ViewAllCustomer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Employees\AddEmployee.resx">
+      <DependentUpon>AddEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Employees\EditEmployee.resx">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Employees\Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Employees\RemoveEmployee.resx">
+      <DependentUpon>RemoveEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Employees\ViewEmployee.resx">
+      <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Report3.rdlc" />
+    <EmbeddedResource Include="Admin\SystemReport.resx">
+      <DependentUpon>SystemReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Reserve\AddReservationA.resx">
+      <DependentUpon>AddReservationA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Reserve\EditReservationA.resx">
+      <DependentUpon>EditReservationA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Reserve\RemoveReservationA.resx">
+      <DependentUpon>RemoveReservationA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Reserve\ReserveA.resx">
+      <DependentUpon>ReserveA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Reserve\ViewReservationA.resx">
+      <DependentUpon>ViewReservationA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Salaries\Calculate.resx">
+      <DependentUpon>Calculate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Salaries\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Salaries\Report1.rdlc" />
+    <EmbeddedResource Include="Admin\Salaries\Report2.rdlc" />
+    <EmbeddedResource Include="Admin\Salaries\Salaries1.resx">
+      <DependentUpon>Salaries1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Sales\EditAllSales1.resx">
+      <DependentUpon>EditAllSales1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Sales\MakeAllSales1.resx">
+      <DependentUpon>MakeAllSales1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Sales\RemoveAllSales1.resx">
+      <DependentUpon>RemoveAllSales1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Sales\AllSales1.resx">
+      <DependentUpon>AllSales1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Sales\ViewAllSales1.resx">
+      <DependentUpon>ViewAllSales1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Stock\AddStockA.resx">
+      <DependentUpon>AddStockA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Stock\EditStockA.resx">
+      <DependentUpon>EditStockA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Stock\RemoveStockA.resx">
+      <DependentUpon>RemoveStockA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Stock\StockA.resx">
+      <DependentUpon>StockA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Stock\ViewStockA.resx">
+      <DependentUpon>ViewStockA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Customer\Customer1.resx">
+      <DependentUpon>Customer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Customer\EditCustomer1.resx">
+      <DependentUpon>EditCustomer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Customer\ViewCustomer1.resx">
+      <DependentUpon>ViewCustomer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Normal1.resx">
+      <DependentUpon>Normal1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Normal2.resx">
+      <DependentUpon>Normal2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Reserve\AddReservation1.resx">
+      <DependentUpon>AddReservation1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Reserve\EditReservation.resx">
+      <DependentUpon>EditReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Reserve\RemoveReservation.resx">
+      <DependentUpon>RemoveReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Reserve\Reserve1.resx">
+      <DependentUpon>Reserve1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Reserve\ViewReservation1.resx">
+      <DependentUpon>ViewReservation1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Sale\EditSale1.resx">
+      <DependentUpon>EditSale1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Sale\MakeSale1.resx">
+      <DependentUpon>MakeSale1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Sale\Sale1.resx">
+      <DependentUpon>Sale1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Sale\ViewSales1.resx">
+      <DependentUpon>ViewSales1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Stock\AddStock1.resx">
+      <DependentUpon>AddStock1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Stock\EditStock1.resx">
+      <DependentUpon>EditStock1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Stock\RemoveStock1.resx">
+      <DependentUpon>RemoveStock1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Stock\Stock1.resx">
+      <DependentUpon>Stock1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Normal\Stock\ViewStock1.resx">
+      <DependentUpon>ViewStock1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SPLASH.resx">
+      <DependentUpon>SPLASH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="itspRouteDataSetFinal.xsc">
+      <DependentUpon>itspRouteDataSetFinal.xsd</DependentUpon>
+    </None>
+    <None Include="itspRouteDataSetFinal.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>itspRouteDataSetFinal.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="itspRouteDataSetFinal.xss">
+      <DependentUpon>itspRouteDataSetFinal.xsd</DependentUpon>
+    </None>
+    <None Include="LTS\LTSGenerator.bat" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_Dialog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\route66.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\827a21a7978fbc9839a52ed9ff4e399d %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\827a21a7978fbc9839a52ed9ff4e399d %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\route66.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2016_ford_mustang_convertible_gt-premium_fq_oem_1_300.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\084605-chevrolet-uk-announces-local-corvette-stingray-coupe-prices.1-lg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\02-2015-ford-mustang-ecoboost-review-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ford-mustang-gt-fastback-01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corvette stingray archit white1 z51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok-appproval-acceptance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rubbish-bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-edit-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sports-car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sports-car %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information-circular-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rubbish-bin %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\human-resources.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\payment-method.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhotoGrid_1469539349247.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator-and-dollar-sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\News-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ratings-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf-file-symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search Filled-50.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

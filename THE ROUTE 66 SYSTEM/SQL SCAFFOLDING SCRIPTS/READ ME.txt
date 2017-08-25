@@ -1,0 +1,7 @@
+The Scripts in this folder were strictly used to generate stored procedures, as well as a data access layer based on THE ROUTE 66 SYSTEM database.
+Under no circumstances should these scripts be run, since they were already used and will cause fatal problems when running them again.
+
+Order the scripts were run in:
+ -SCRIPT 1: which produce SCRIPT 2
+ -SCRIPT 2: Which were produced by SCRIPT 1
+ -SCRIPT 3: which produce c# code which are copied into the source code under the folder DAT, into a class file DataAccess.cs 
