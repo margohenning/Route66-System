@@ -1,0 +1,2 @@
+This folder contains the script for the ROUTE 66 DATABASE.
+To create the database on a Microsoft SQL Server, run the script.
